@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add station</title>
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="css/admin-news.css" rel="stylesheet">
+    <script src="js/menuScroll.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        tr td:last-child {
+            border-top-right-radius: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body id="body">
+<div class="top-menu animation-menu" id="menu" >
+    <a href="/admin-company"><img class="menu-logo" src="media/logo.png" alt="Логотип компании"></a>
+    <a id="company" href="/admin-company">О компании</a>
+    <a id="news" href="/admin-news">Новости</a>
+    <a id="stations" href="/admin-stations">Станции</a>
+    <a id="products" href="/admin-products">Продукция</a>
+    <a id="service" href="/admin-service">Услуги</a>
+</div>
+<h1>Добавление информации о новой станции </h1>
+<form action="#" th:action="@{/add-station}" method="post">
+    <table style="width: 50%; margin: auto;">
+        <tr>
+            <th style="width: 50%;">Адрес станции</th>
+        </tr>
+        <tr style="min-height: 160px">
+            <td><textarea required name="address" id="input-address" spellcheck="false">Россия,Самара,...</textarea></td>
+        </tr>
+    </table>
+    <div style="text-align: right; margin-top: 15px; margin-right: 25%">
+        <input class="sub" type="submit" value="Добавить">
+        <input class="sub" type="button" value="Назад" onclick="document.location.href='http://localhost:8080/admin-stations'">
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link href="css/products.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/menuScroll.js" type="text/javascript"></script>
+    <script src="js/productsHover.js" type="text/javascript"></script>
+</head>
+<body id="body">
+<div style="margin-top: -10px" class="top-menu animation-menu" id="menu" >
+    <a href="/admin-company"><img class="menu-logo" src="media/logo.png" alt="Логотип компании"></a>
+    <a id="company" href="/admin-company">О компании</a>
+    <a id="news" href="/admin-news">Новости</a>
+    <a id="stations" href="/admin-stations">Станции</a>
+    <a id="products" href="/admin-products">Продукция</a>
+    <a id="service" href="/admin-service">Услуги</a>
+</div>
+
+<div style="margin-top: 110px" id="fuel_text" onclick="redirectAdminFuel();">Редактировать сведения о топливе</div>
+<div id="fuel" onclick="redirectAdminFuel();"></div>
+<div id="prod_text" onclick="redirectAdminProd();">Редактировать сведения о прочей продукции</div>
+<div id="prod" onclick="redirectAdminProd();"></div>
+
+<hr class="hr2">
+<div id="aukLine">8 800 906 74 07</div>
+<div id="aukLineText">Горячая линия для акционеров</div>
+<div id="azsLine">8 800 900 41 57</div>
+<div id="azsLineText">Горячая линия службы поддержки АЗС</div>
+<div id="faks">7-095-333-3333</div>
+<div id="faksText">Факс</div>
+<div id="mail">SamaraNeft@gmail.com</div>
+<div id="mailText">Контактная почта</div>
+</body>
+</html>

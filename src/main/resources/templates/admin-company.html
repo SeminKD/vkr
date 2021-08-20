@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin company</title>
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="css/admin-company.css" rel="stylesheet">
+    <script src="js/menuScroll.js" type="text/javascript"></script>
+    <script src="js/dateControl.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body id="body">
+<div class="top-menu animation-menu" id="menu" >
+    <a href="/admin-company"><img class="menu-logo" src="media/logo.png" alt="Логотип компании"></a>
+    <a id="company" href="/admin-company">О компании</a>
+    <a id="news" href="/admin-news">Новости</a>
+    <a id="stations" href="/admin-stations">Станции</a>
+    <a id="products" href="/admin-products">Продукция</a>
+    <a id="service" href="/admin-service">Услуги</a>
+</div>
+<h1>Редактирование сведений о компании</h1>
+<form action="#" th:action="@{/edit-company}" method="post">
+    <table>
+        <tr>
+            <th style="width: 10%">Название компании</th>
+            <th>Описание компании</th>
+        </tr>
+        <tr style="min-height: 160px">
+            <td><textarea required name="name" id="input-name" spellcheck="false" th:text="${company.getName_company()}"></textarea></td>
+            <td><textarea required name="text" id="input-text" spellcheck="false" th:text="${company.getInformation_company()}"></textarea></td>
+        </tr>
+    </table>
+    <div style="text-align: right; margin-top: 10px">
+        <input class="sub" type="submit" value="Сохранить изменения">
+    </div>
+</form>
+<form action="/logout" method="post">
+    <div style="text-align: right; margin-top: 10px">
+    <input class="sub" type="submit" value="Выйти">
+    </div>
+</form>
+</body>
+</html>

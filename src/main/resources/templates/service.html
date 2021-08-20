@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service</title>
+    <link href="css/service.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/5by7" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/menuScroll.js" type="text/javascript"></script>
+    <script src="js/service.js" type="text/javascript"></script>
+</head>
+<body id="body">
+<div class="top-menu animation-menu" id="menu" >
+    <a href="/company"><img class="menu-logo" src="media/logo.png" alt="Логотип компании"></a>
+    <a id="company" href="/company">О компании</a>
+    <a id="news" th:href="@{/news(year=${#calendars.format(#calendars.createNow(), 'YYYY')}, month='null')}">Новости</a>
+    <a id="map" href="/map">Карта АЗС</a>
+    <a id="products" href="/products">Продукция</a>
+    <a id="service" href="/service">Услуги</a>
+</div>
+<div id="header">Услуги "СамараАЗС"</div>
+<div id="fuel_text">Компания производит различные автомобильные масла высочайшего качества.</div>
+<br>
+<div style="display:inline-block; vertical-align: top" class="div-table">
+    <table class="fuel-table">
+        <caption class="up"><img src="media/logo.png" alt="Логотип компании" id="caption"></caption>
+        <tbody>
+        <tr th:each="f:${fuel}">
+            <td id="td1" th:text="${f.name_fuel}"></td>
+            <td id="td2" th:text="${f.price_fuel}"></td>
+        </tr>
+        </tbody>
+        <caption class="lastcap">
+            <img src="media/cafe.png" alt="Кафе" id="cafe">
+            <img src="media/people.png" alt="Для всех" id="people">
+            <img src="media/24.png" alt="Круглосуточно" id="time">
+        </caption>
+    </table>
+</div>
+
+<div th:each="s:${service}" class="cont" th:onclick="'javascript:showText(' + ${s.getId_service()} + ','+this+')'">
+    <div style="display: none" th:id="${s.getId_service()}">
+        <div class="name" th:text="${s.getName_service()}"></div>
+        <div class="price" th:text="${s.getPrice_service()}"></div>
+        <hr class="hr">
+        <pre  class="descFuel" th:text="${s.getDescription_service()}"></pre>
+    </div>
+    <img style="display: block" th:src="${s.getImg_service()}" class="imgFuel" th:alt="${s.getName_service()}">
+</div>
+
+<hr class="hr2">
+<div id="aukLine">8 800 906 74 07</div>
+<div id="aukLineText">Горячая линия для акционеров</div>
+<div id="azsLine">8 800 900 41 57</div>
+<div id="azsLineText">Горячая линия службы поддержки АЗС</div>
+<div id="faks">7-095-333-3333</div>
+<div id="faksText">Факс</div>
+<div id="mail">SamaraAZS@gmail.com</div>
+<div id="mailText">Контактная почта</div>
+</body>
+</html>
