@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin other products</title>
+    <link href="css/admin.css" rel="stylesheet">
+    <script src="js/menuScroll.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        tr td:last-child {
+            border-top-right-radius: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body id="body">
+<div class="top-menu animation-menu" id="menu" >
+    <a href="/admin-company"><img class="menu-logo" src="media/logo.png" alt="Логотип компании"></a>
+    <a id="company" href="/admin-company">О компании</a>
+    <a id="news" href="/admin-news">Новости</a>
+    <a id="stations" href="/admin-stations">Станции</a>
+    <a id="products" href="/admin-products">Продукция</a>
+    <a id="service" href="/admin-service">Услуги</a>
+</div>
+<h1>Редактирование информации о продуктах</h1>
+<table>
+    <tr>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Цена</th>
+        <th>Изображение</th>
+    </tr>
+    <tr style="width: 150px" th:each="p:${products}">
+        <td class="input" th:text="${p.name_product}"></td>
+        <td class="input" th:text="${p.description_product}"></td>
+        <td class="input" th:text="${p.price_product}"></td>
+        <td style="width: 10%" class="input" th:text="${p.img_product}"></td>
+        <td>
+            <a class="sub" th:href="@{product-edit(id=${p.id_product})}">Изменить</a>
+            <div style="height: 10px"></div>
+            <p>
+                <a class="sub" th:href="@{product-delete(id=${p.id_product})}">Удалить</a>
+            </p>
+        </td>
+    </tr>
+</table>
+<div style="text-align: right; margin-top: 15px">
+    <input class="sub" type="button" value="Добавить продукт" onclick="document.location.href='http://localhost:8080/add-product'">
+    <input class="sub" type="button" value="Назад" onclick="document.location.href='http://localhost:8080/admin-products'">
+</div>
+</body>
+</html>

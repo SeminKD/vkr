@@ -1,0 +1,20 @@
+#input-name{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 50px;
+}
+#input-text{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 150px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin stations</title>
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="css/admin-news.css" rel="stylesheet">
+    <script src="js/menuScroll.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        tr td:last-child {
+            border-top-right-radius: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body id="body">
+<div class="top-menu animation-menu" id="menu" >
+    <a href="/admin-company"><img class="menu-logo" src="media/logo.png" alt="Логотип компании"></a>
+    <a id="company" href="/admin-company">О компании</a>
+    <a id="news" href="/admin-news">Новости</a>
+    <a id="stations" href="/admin-stations">Станции</a>
+    <a id="products" href="/admin-products">Продукция</a>
+    <a id="service" href="/admin-service">Услуги</a>
+</div>
+<h1>Редактирование информации о станциях</h1>
+    <table style="width: 70%; margin: auto;">
+        <tr>
+            <th style="width: 50%;">Адрес станции</th>
+        </tr>
+        <tr th:each="s:${stations}" style="min-height: 160px">
+            <td><textarea required name="address" id="input-address" spellcheck="false" th:text="${s.address_station}"></textarea></td>
+            <td>
+                <a class="sub" th:href="@{station-editFPS(id=${s.id_station})}">Изменить наличие продукции</a>
+                <div style="height: 10px"></div>
+                <p>
+                    <a class="sub" th:href="@{station-delete(id=${s.id_station})}">Удалить</a>
+                </p>
+                <div style="height: 10px"></div>
+                <a class="sub" th:href="@{station-edit(id=${s.id_station})}">Редактировать адрес</a>
+            </td>
+        </tr>
+    </table>
+<div style="text-align: right; margin-top: 15px; margin-right: 15%">
+    <input class="sub" type="button" value="Добавить станцию" onclick="document.location.href='http://localhost:8080/add-station'">
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit service</title>
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="css/admin-news.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/menuScroll.js" type="text/javascript"></script>
+    <script src="js/dateControl.js" type="text/javascript"></script>
+</head>
+<body id="body">
+<div class="top-menu animation-menu" id="menu" >
+    <a href="/admin-company"><img class="menu-logo" src="media/logo.png" alt="Логотип компании"></a>
+    <a id="company" href="/admin-company">О компании</a>
+    <a id="news" href="/admin-news">Новости</a>
+    <a id="stations" href="/admin-stations">Станции</a>
+    <a id="products" href="/admin-products">Продукция</a>
+    <a id="service" href="/admin-service">Услуги</a>
+</div>
+<h1>Редактируемая информация об услуге</h1>
+<form action="#" th:action="@{/service-edit}" method="post">
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Цена</th>
+            <th>Изображение</th>
+        </tr>
+        <tr>
+            <td style="width: 10%">
+                <textarea required name="name" id="input-name" spellcheck="false" th:text="${service.name_service}"></textarea>
+            </td>
+            <td>
+                <textarea required name="desc" id="input-desc" spellcheck="false" th:text="${service.description_service}"></textarea>
+            </td>
+            <td style="width: 20%;">
+                <textarea onchange="controlNumber()" name="price" id="input-price" spellcheck="false" th:text="${service.price_service}"></textarea>
+            </td>
+            <td style="width: 10%;">
+                <select id="select" name="img">
+                    <option selected th:text="${service.img_service}" th:value="${service.img_service}" th:if="${service.img_service != null}"></option>
+                    <option th:each="i:${images}" th:value="${i}" th:text="${i}"></option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <div style="text-align: right; margin-top: 10px">
+        <input hidden type="number" th:name="id" th:value="${service.id_service}">
+        <input class="sub" type="submit" value="Сохранить изменения">
+        <input class="sub" type="button" value="Назад" onclick="document.location.href='http://localhost:8080/admin-service'">
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,268 @@
+.top-menu{
+    background-color: white;
+    width: 110%;
+    height: 100px;
+    position: fixed;
+    overflow: hidden;
+    margin-top: -10px;
+    margin-left: -10px;
+    z-index: 1;
+    transform: scaleY(1);
+}
+.animation-menu{
+    transition: transform 0.25s ease-in-out;
+}
+.menu-logo{
+    margin-top: 5px;
+    margin-left: 2%;
+    height: 90px;
+    width: auto;
+}
+#company{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 5%;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#news{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 19.5%;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#map{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 31%;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#products{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 44.5%;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#service{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 58.3%;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#products:hover{
+    color: #75c5f0;
+}
+#service:hover{
+    color: #75c5f0;
+}
+#company:hover{
+    color: #75c5f0;
+}
+#news:hover{
+    color: #75c5f0;
+}
+#map:hover{
+    color: #75c5f0;
+}
+#company-body{
+    background-color: rgba(141,208,236,0.5);
+}
+.text-company{
+    z-index: -4;
+    position: absolute;
+    width: 57ch;
+    margin-top: 135px;
+    margin-left: 32%;
+    white-space: pre-wrap;
+    font-size: 3.2ch;
+    font-family: Calibri, sans-serif;
+}
+.about-company{
+    z-index: -4;
+    position: absolute;
+    width: auto;
+    margin-top: 95px;
+    margin-left: 34.75%;
+    white-space: pre-wrap;
+    font-size: 4ch;
+    font-family: Calibri, sans-serif;
+    font-weight: bold;
+}
+.fuel-table{
+    position: absolute;
+    margin-top: 161px;
+    margin-left: 6.9%;
+    font-family: '5by7Regular';
+    width: 210px;
+    height: 300px;
+    border: solid black;
+}
+#caption{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 180px;
+    height: auto;
+}
+.menu-logo:hover{
+    cursor: pointer;
+}
+.up{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+caption{
+    width: auto;
+    border: solid black;
+    background-color: #efbc00;
+}
+#td1{
+    height: 20px;
+    width: 50%;
+    text-align: left;
+    border: solid black;
+    background-color: #75c5f0;
+}
+#td2{
+    background-color: #75c5f0;
+    text-align: right;
+    height: 20px;
+    width: 50%;
+    border: solid black;
+}
+.lastcap{
+    background-color: #efbc00;
+    caption-side: bottom;
+}
+#cafe{
+    height: 30px;
+    width: 30px;
+}
+#people{
+    height: 30px;
+    width: 30px;
+}
+#time{
+    height: 30px;
+    width: 30px;
+}
+hr{
+    position: absolute;
+    width: 80%;
+    background-color: #efbc00;
+    margin-left: 10%;
+    margin-top: 650px;
+}
+
+#aukLine{
+    position: absolute;
+    margin-top: 670px;
+    font-size: 2ch;
+    font-family: Calibri, sans-serif;
+    color: black;
+    margin-left: 10%;
+}
+#aukLineText{
+    position: absolute;
+    margin-top: 690px;
+    font-size: 2ch;
+    font-family: Calibri, sans-serif;
+    color: black;
+    margin-left: 10%;
+    padding: 0 0 10px 0;
+}
+#azsLine{
+    position: absolute;
+    margin-top: 670px;
+    font-size: 2ch;
+    font-family: Calibri, sans-serif;
+    color: black;
+    margin-left: 32%;
+}
+#azsLineText{
+    position: absolute;
+    margin-top: 690px;
+    font-size: 2ch;
+    font-family: Calibri, sans-serif;
+    color: black;
+    margin-left: 32%;
+    padding: 0 0 10px 0;
+}
+#faks{
+    position: absolute;
+    margin-top: 670px;
+    font-size: 2ch;
+    font-family: Calibri, sans-serif;
+    color: black;
+    margin-left:58.5%;
+}
+#faksText{
+    position: absolute;
+    margin-top: 690px;
+    font-size: 2ch;
+    font-family: Calibri, sans-serif;
+    color: black;
+    margin-left: 58.5%;
+    padding: 0 0 10px 0;
+}
+#mail{
+    position: absolute;
+    margin-top: 670px;
+    font-size: 2ch;
+    font-family: Calibri, sans-serif;
+    color: black;
+    margin-left: 72%;
+}
+#mailText{
+    position: absolute;
+    margin-top: 690px;
+    font-size: 2ch;
+    font-family: Calibri, sans-serif;
+    color: black;
+    margin-left: 72%;
+    padding: 0 0 10px 0;
+}
+#admin{
+    position: absolute;
+    margin-top: 670px;
+    font-size: 2ch;
+    font-family: Calibri, sans-serif;
+    color: black;
+    margin-left: 85%;
+    text-decoration: none;
+}
+#admin:hover{
+    text-decoration: underline;
+}
+::-webkit-scrollbar-button {
+    background-repeat:no-repeat;
+    width:5px;
+    height:0;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #efbc00;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(255,199,0,0.45);
+}
+::-webkit-scrollbar{
+    width: 7px;
+}

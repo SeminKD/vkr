@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=00d25204-7659-4b07-82e3-74cbb043bc21&lang=ru_RU" type="text/javascript">
+    </script>
+    <script src="js/createMap.js" type="text/javascript"></script>
+    <link href="css/map.css" rel="stylesheet">
+    <script src="js/menuScroll.js" type="text/javascript"></script>
+</head>
+<body id="body">
+<div class="top-menu animation-menu" id="menu" >
+    <a href="/company"><img class="menu-logo" src="media/logo.png" alt="Логотип компании"></a>
+    <a id="company" href="/company">О компании</a>
+    <a id="news" th:href="@{/news(year=${#calendars.format(#calendars.createNow(), 'YYYY')}, month='null')}">Новости</a>
+    <a id="mapp" href="/map">Карта АЗС</a>
+    <a id="products" href="/products">Продукция</a>
+    <a id="service" href="/service">Услуги</a>
+</div>
+<div class="header">Карта АЗС</div>
+<div id="m_text">С помощью виртуальной карты компании вы сможете увидеть расположения наших АЗС,
+    указать необходимые вам услуги,а также построить маршрут до станций</div>
+<div id="filter" style="user-select: none">
+    <div style="margin-left: 24.5%; margin-top: 25px">
+    <div style="display: inline-block; vertical-align: top">
+        <div style="text-decoration: underline">Топливо:</div>
+    <div style="margin-left: 5px;" th:each="f:${fuelList}">
+        <label style="cursor: pointer">
+        <input style="margin-top: 5px" class="radio-button-fuel" type="checkbox" th:name="${f.name_fuel}" th:value="${f.name_fuel}" th:text="${f.name_fuel}">
+        </label>
+    </div>
+    </div>
+    <div style="display:inline-block; vertical-align: top">
+        <div style="text-decoration: underline">Услуги:</div>
+    <div style="margin-left: 5px" th:each="s:${serviceList}">
+        <label style="cursor: pointer">
+        <input style="margin-top: 5px;" class="radio-button-service" type="checkbox" th:name="${s.name_service}" th:value="${s.name_service}" th:text="${s.name_service}">
+        </label>
+    </div>
+    </div>
+    <div style="display: inline-block; vertical-align: top">
+        <div style="text-decoration: underline">Продукты:</div>
+    <div style="margin-left: 5px" th:each="p:${productList}">
+        <label style="cursor: pointer">
+        <input class="radio-button-product" style="margin-top: 5px" type="checkbox" th:name="${p.name_product}" th:value="${p.name_product}" th:text="${p.name_product}">
+        </label>
+    </div>
+    </div>
+    </div>
+    <div style="margin-left: 24.5%; margin-top: 10px">
+    <button type="submit" class="sub" onclick="editMap()">Найти</button>
+    <button type="submit" class="sub" onclick="way()">Проложить маршрут</button>
+    <button type="submit" class="sub" onclick="blocWay()">Скрыть маршрут</button>
+    </div>
+</div>
+<div id="map"></div>
+<hr class="hr2">
+<div id="aukLine">8 800 906 74 07</div>
+<div id="aukLineText">Горячая линия для акционеров</div>
+<div id="azsLine">8 800 900 41 57</div>
+<div id="azsLineText">Горячая линия службы поддержки АЗС</div>
+<div id="faks">7-095-333-3333</div>
+<div id="faksText">Факс</div>
+<div id="mail">SamaraAZS@gmail.com</div>
+<div id="mailText">Контактная почта</div>
+</body>
+</html>

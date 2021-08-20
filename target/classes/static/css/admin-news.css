@@ -1,0 +1,125 @@
+.input{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    font-size: larger;
+}
+
+#input-name{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 150px;
+}
+#input-prev{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 270px;
+}
+#input-text{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 270px;
+}
+#input-date{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 40px;
+}
+
+
+#input-name{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 150px;
+}
+#input-desc{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 270px;
+}
+#input-price{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 40px;
+}
+#input-img{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 150px;
+}
+
+#select{
+    background-color: #F8E391;
+    font-family: Calibri, sans-serif;
+    font-size: larger;
+}
+
+#input-address{
+    white-space: pre-wrap;
+    font-family: Calibri, sans-serif;
+    width: 100%;
+    font-size: larger;
+    background-color: #F8E391;
+    border: none;
+    resize: none;
+    min-height: 100px;
+}
+
+.radio-button-fuel{
+    font-family: Calibri, sans-serif;
+    font-size: larger;
+    margin-top: 10px;
+}
+.radio-button-product{
+    font-family: Calibri, sans-serif;
+    font-size: larger;
+    margin-top: 10px;
+}
+.radio-button-service{
+    font-family: Calibri, sans-serif;
+    font-size: larger;
+    margin-top: 10px;
+}
+.cont{
+    font-family: Calibri, sans-serif;
+    font-size: large;
+}

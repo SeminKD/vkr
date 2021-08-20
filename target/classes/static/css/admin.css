@@ -1,0 +1,178 @@
+.top-menu{
+    background-color: white;
+    width: 110%;
+    height: 98px;
+    position: fixed;
+    overflow: hidden;
+    margin-top: -110px;
+    margin-left: -10px;
+    z-index: 1;
+    transform: scaleY(1);
+    padding: 0;
+}
+.animation-menu{
+    transition: transform 0.25s ease-in-out;
+}
+.menu-logo{
+    margin-top: 3px;
+    margin-left: 2%;
+    height: 90px;
+    width: auto;
+}
+#company{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 5%;
+    margin-top: 38px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#news{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 19.5%;
+    margin-top: 38px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#stations{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 31%;
+    margin-top: 38px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#products{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 42.5%;
+    margin-top: 38px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#service{
+    position: fixed;
+    font-size: 3ch;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 56.3%;
+    margin-top: 38px;
+    text-decoration: none;
+    color: #007cc3;
+}
+#products:hover{
+    color: #75c5f0;
+}
+#service:hover{
+    color: #75c5f0;
+}
+#company:hover{
+    color: #75c5f0;
+}
+#news:hover{
+    color: #75c5f0;
+}
+#stations:hover{
+    color: #75c5f0;
+}
+#company-body{
+    background-color: rgba(141,208,236,0.5);
+}
+#body{
+    background-color: rgba(141,208,236,0.5);
+}
+::-webkit-scrollbar-button {
+    background-repeat:no-repeat;
+    width:5px;
+    height:0;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #efbc00;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(255,199,0,0.45);
+}
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+h1{
+    text-align: center;
+    font-family: Calibri, sans-serif;
+    font-size: 4ch;
+    margin-top: 110px;
+    font-weight: bold;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+}
+th {
+    background: #079BCF;
+    color: white;
+    padding: 10px 20px;
+}
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: grey;
+}
+th:first-child {
+    text-align: center;
+}
+th:first-child {
+    border-top-left-radius: 10px;
+}
+th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+td {
+    padding: 10px 10px;
+    background: #F8E391;
+    text-align: left;
+    vertical-align: top;
+}
+tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+tr td:last-child {
+    border-top-right-radius: 10px;
+}
+.sub{
+    font: 400 13.3333px Arial;
+    color: black;
+    height: 32px;
+    width: 190px;
+    outline: none;
+    text-decoration: none;
+    padding: .5em 2em;
+    border-style: none;
+    border-radius: 6px;
+    background: linear-gradient(white, #74b1cc) #8dd0ec;
+    transition: 0.2s;
+}
+.sub:hover {
+    cursor: pointer;
+    background:linear-gradient(white, #deeeef) #9fabac;
+}
